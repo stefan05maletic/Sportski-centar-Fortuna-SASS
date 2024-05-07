@@ -1,0 +1,156 @@
+@import 'colors';
+.panel1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 3rem;
+    height: auto;
+    width: 100%;
+    background-color: $svetla;
+    @include tablet{
+        grid-template-columns: 1fr;
+    }
+    @include mobileM{
+        padding: 0;
+    }
+}
+.part1{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    justify-content: center;
+    align-items:flex-start;
+    padding: 2rem ;
+    width: 90%;
+    height: 40vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &:hover{
+        box-shadow: 0 2px 10px $tamna;
+        transition: 1s ease;
+    }
+    &:hover .panelBtn{
+        background-color: $svetloZelena;
+        color: $tamna;
+        transition: 1s ease;
+    }
+    @include mobileM{
+        width: 100%;
+    }
+}
+#delic1{
+    background-image: url('../images/women.jpg');
+}
+#delic2{
+    background-image: url('../images/referee.jpg');
+}
+.panel1 h5{
+    color: $svetloZelena;
+    font-size: 1.3rem;
+    @include mobileM{
+    font-size: 1.1rem;
+    }
+}
+.panel1 h3{
+    color: $svetla;
+    font-size: 1.8rem;
+    padding: 5px 0;
+    @include mobileM{
+    font-size: 1.5rem;
+    }
+}
+.panel1 p{
+    color: $svetloZelena;
+    font-weight: 500;
+    font-size: 1.1rem;
+    @include mobileM{
+    font-size: 0.8rem;
+    }
+}
+.panelBtn{
+    text-align: center;
+    background-color: $zelena;
+    border: none;
+    cursor: pointer;
+    padding: 6px 20px;
+    font-size: 1rem;
+    margin-top: 1rem;
+    color: $svetla;
+    font-weight: 600;
+    border-radius: 5px;
+}
+.panel2{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    height: auto;
+    padding: 0 3rem;
+    @include tablet{
+        grid-template-columns: 1fr;
+    }
+    @include mobile{
+        padding: 0 1rem;
+    }
+}
+.part2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 2px solid $zlatna;
+    cursor: pointer;
+    width: 90%;
+    height: 30vh;
+    @include tablet{
+        width: 50%;
+        margin:2% 25%;
+    }
+    @include mobileL{
+        width: 70%;
+        margin: 2% 15%;
+    }
+    @include mobileS{
+        width: 100%;
+        margin: 4% 0;
+    }
+    &:hover {
+        transition: 1s ease;
+        box-shadow: 0 2px 10px $tamna;
+    }
+}
+
+#delic3{
+    background-image: url('../images/tournament.jpg');
+}
+#delic4{
+background-image: url('../images/stud-indeks.jpg');
+}
+#delic5{
+background-image: url('../images/drinks.jpg');
+}
+.part2 h4{
+    font-size: 1.3rem;
+    color: $zelena;
+    background-color: $svetla;
+    width: 100%;
+    padding: 5px 15px;
+    margin-bottom: 10px;
+    @include mobileL{
+    font-size: 1.1rem;
+    }
+}
+.part2 p{
+    font-size: 0.9rem;
+    color: $svetla;
+    background-color: $zelena;
+    font-weight: 500;
+    padding: 5px 15px;
+    width: 100%;
+    @include mobileL{
+    font-size: 0.8rem;
+    }
+}

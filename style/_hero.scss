@@ -1,0 +1,80 @@
+.hero{
+    background-image: url('../images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.heroContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    height: 90vh;
+    width: 100%;
+    z-index: 1;
+    max-width: 1200px;
+    padding-right: 24px;
+    padding-left: 24px;
+
+    @include tablet{
+        grid-template-columns: 1fr;
+        height: 100%;
+    }
+}
+.heroContainerLeft{
+    width: 100%;
+    line-height: 1.2;
+    @include tablet{
+        padding: 8rem 0;
+    }
+    @include mobile{
+        line-height: 1.5;
+    }
+}
+.heroContainerLeft h1{
+    font-size: 4rem;
+    color: $svetloZelena;
+    @include mobile{
+        font-size: 1.5rem;
+    }
+}
+.heroContainerLeft h2{
+    font-size: 2rem;
+    color: $svetla;
+    @include mobile{
+        font-size: 2rem;
+    }
+}
+.heroContainerLeft p{
+    font-size: 1.5rem;
+    color: $svetla;
+    font-weight: 400;
+    margin-top: 0.5rem;
+    @include mobile{
+        font-size: 1.5rem;
+    }
+}
+.heroContainerBtn{
+    font-size: 1rem;
+    background-color: $svetla;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 15px;
+    color: $tamna;
+    margin-top: 1rem;
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s;
+    outline: none;
+    &:hover{
+        background-color: $svetloZelena;
+    }
+}
+.heroContainerBtn a{
+    position: relative;
+    z-index: 2;
+    color: $tamna;
+    text-decoration: none;
+    font-weight: 600;
+}

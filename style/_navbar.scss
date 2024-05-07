@@ -1,0 +1,71 @@
+@import 'colors';
+@import 'media-queries';
+%align-center{
+    display: flex;
+    align-items: center;
+}
+.navbar{
+    background-color: $zelena;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    z-index: 10;
+    position: relative;
+}
+.navbarLogo{
+    color: $svetla;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin: 22px;
+    @extend %align-center;
+    font-weight: 700;
+}
+.navbarBars{
+    opacity: 0;
+    @include tablet{
+        color: $svetla;
+        opacity: 1;
+        position: absolute;
+        top: 22px;
+        right: 20px;
+        font-size: 2rem;
+    }
+}
+.navbarMenu{
+    @extend %align-center;
+    list-style: none;
+    text-align: center;
+    margin-right: 24px;
+    @include tablet{
+        display: none;
+    }
+}
+.navbarMenuLinks{
+    color: $svetla;
+    @extend %align-center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0.4rem 1rem;
+    font-weight: 600;
+    font-size: 18px;
+    &:hover{
+        color: $zelena;
+        transition: 1s ease;
+        background-color: $svetla;
+        border-radius: 20px;
+    }
+}
+#button{
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    background-color: $svetloZelena;
+    margin-left: 16px;
+    color: $tamna; 
+    &:hover{
+        transition: 1s ease;
+        background-color: $tamna;
+        color: $svetla;
+    }
+}

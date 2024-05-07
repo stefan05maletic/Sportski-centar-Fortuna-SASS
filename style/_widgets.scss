@@ -1,0 +1,69 @@
+@import 'colors';
+.widgets{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px;
+    height: auto;
+    width: 100%;
+    z-index: 1;
+    padding: 3rem;
+    
+    @include laptop{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    @include tablet{
+        grid-template-columns: 1fr 1fr;
+    }
+    @include mobileL{
+        display: flex;
+        flex-direction: column;
+    }
+}
+.container{
+    background-color: $svetla;
+    margin-bottom: 30px;
+    padding: 20px;
+    width: 80%;
+    height: 250px;
+    text-align: center;
+    align-items: center;
+    box-shadow: 0 0.4px 4px #000000;
+    cursor: pointer;
+    &:hover{
+        box-shadow: 0 2px 20px #000000;
+        transition: 1s ease;
+    }
+    @include tablet{
+        width: 60%;
+        margin: 20px 20%;
+    }
+    @include mobileL{
+        width: 50%;
+    }
+    @include mobileM{
+        width: 60%;
+    }
+    @include mobileM{
+        width: 80%;
+        margin: 20px 10%;
+    }
+    @include mobile{
+        width: 90%;
+        margin: 20px 5%;
+    }
+    
+}
+.containerImg img{
+    width: 100%;
+    height: 180px;
+}
+.containerText{
+    font-size: 16px;
+    background-color: $zelena;
+    color: $svetla;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+}

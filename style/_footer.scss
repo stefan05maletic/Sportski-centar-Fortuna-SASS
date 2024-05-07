@@ -1,0 +1,80 @@
+@import 'colors';
+.footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: space-around;
+    width: 100%;
+    height: 50vh;
+    padding: 8rem 3rem;
+    @include tablet{
+        grid-template-columns: 1fr 1fr;
+        height: 60vh;
+        padding: 6rem 3rem;
+    }
+    @include mobileL{
+        grid-template-columns: 1fr;
+        height: 80vh;
+        padding: 4rem 3rem;
+    }
+}
+.information{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+.footer h3{
+    font-size: 0.9rem;
+    color: $tamna;
+    margin-bottom: 8px;
+    @include mobileL{
+        margin: 12px 0;
+    }
+}
+.footer p{
+    color: $tamna;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+.social i{
+    text-decoration: none;
+    color: $tamna;
+    font-size: 1.3rem;
+    margin: 5px;
+}
+.about{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.footer a{
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin: 2px 0;
+    cursor: pointer;
+    &:hover {
+        color: $zelena;
+        transition: 0.5s ease;
+    }
+}
+.help{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.app {
+    width: 100%;
+}
+.app img{
+    width: 25%;
+    height: 60px;
+    cursor: pointer;
+    @include laptop {
+        width: 40%;
+    }
+    &:hover{
+        box-shadow: 0 0 3px $tamna;
+        transition: 0.5s ease;
+    }
+}
